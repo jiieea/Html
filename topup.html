@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Top Up | GemPay Top Up Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <nav id="menu" class="box">
+        <a href="index.html">Beranda</a>
+        <a href="topup.html" class="aktif">Top Up</a>
+        <a href="promo.html">Promo</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+      <form id="search" class="box" role="search" action="topup.html">
+        <input
+          type="search"
+          name="q"
+          placeholder="Cari game..."
+          aria-label="Pencarian"
+        />
+        <button type="submit">Cari</button>
+      </form>
+      <div id="logo" class="box">
+        <div class="gem" aria-hidden="true"></div>
+        <strong>GemPay</strong>
+        <small>Top up game cepat &amp; aman</small>
+      </div>
+      <header id="header" class="box">
+        <h1>Pilih Game & Nominal</h1>
+        <p>Harga di bawah sudah termasuk biaya layanan.</p>
+      </header>
+      <aside id="recent" class="box">
+        <h3>Berita Terbaru</h3>
+        <ul>
+          <li>
+            <a href="kontak.html">Bonus 20% diamond akhir pekan</a
+            ><small>16 Nov 2026</small>
+          </li>
+          <li>
+            <a href="topup.html">Voucher game baru ditambahkan</a
+            ><small>14 Nov 2026</small>
+          </li>
+          <li>
+            <a href="promo.html">Tips aman bertransaksi top up</a
+            ><small>10 Nov 2026</small>
+          </li>
+          <li>
+            <a href="index.html">Layanan CS kini 24 jam</a
+            ><small>5 Nov 2026</small>
+          </li>
+        </ul>
+      </aside>
+      <main id="content" class="box">
+        <h2>Daftar Harga</h2>
+        <table>
+          <tr>
+            <th>Game</th>
+            <th>Item</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td>Mobile Legends</td>
+            <td>86 Diamond</td>
+            <td>Rp 22.000</td>
+          </tr>
+          <tr>
+            <td>Mobile Legends</td>
+            <td>172 Diamond</td>
+            <td>Rp 44.000</td>
+          </tr>
+          <tr>
+            <td>Free Fire</td>
+            <td>140 Diamond</td>
+            <td>Rp 20.000</td>
+          </tr>
+          <tr>
+            <td>PUBG Mobile</td>
+            <td>325 UC</td>
+            <td>Rp 78.000</td>
+          </tr>
+          <tr>
+            <td>Genshin Impact</td>
+            <td>330 Genesis Crystal</td>
+            <td>Rp 78.000</td>
+          </tr>
+        </table>
+        <h2>Form Pemesanan</h2>
+        <form class="f" action="#" method="get">
+          <label for="game">Game</label>
+          <select id="game">
+            <option>Mobile Legends</option>
+            <option>Free Fire</option>
+            <option>PUBG Mobile</option>
+            <option>Genshin Impact</option>
+          </select>
+          <label for="uid">User ID</label>
+          <input id="uid" type="text" placeholder="Contoh: 12345678 (1234)" />
+          <label for="nom">Nominal</label>
+          <select id="nom">
+            <option>Paket kecil</option>
+            <option>Paket sedang</option>
+            <option>Paket besar</option>
+          </select>
+          <button class="btn" type="submit" style="border: 0; cursor: pointer">
+            Bayar Sekarang
+          </button>
+        </form>
+      </main>
+      <footer id="footer" class="box">
+        <strong>GemPay</strong> – Top up diamond, UC, dan voucher game
+        favoritmu.<br />
+        <small>&copy; 2026 GemPay. Dibuat untuk tugas HTML &amp; CSS.</small>
+      </footer>
+    </div>
+  </body>
+</html>

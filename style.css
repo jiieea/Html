@@ -1,0 +1,251 @@
+:root {
+    --bg: #14122b;
+    --panel: #201d45;
+    --line: #3a3570;
+    --gold: #ffc233;
+    --cyan: #38e6d4;
+    --text: #ecebff;
+    --muted: #a9a6d6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Verdana, Tahoma, sans-serif;
+    line-height: 1.6;
+    padding: 12px;
+}
+
+a {
+    color: var(--cyan);
+}
+
+.wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 240px 1fr 240px;
+    grid-template-areas: "menu menu search" "logo header header" "recent content content" "footer footer footer";
+}
+
+.box {
+    background: var(--panel);
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+#menu {
+    grid-area: menu;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+#menu a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#menu a:hover,
+#menu a.aktif {
+    background: var(--gold);
+    color: #241a00;
+}
+
+#search {
+    grid-area: search;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 10px;
+}
+
+#search input {
+    flex: 1;
+    min-width: 0;
+    padding: 7px 10px;
+    border-radius: 6px;
+    border: 2px solid var(--line);
+    background: var(--bg);
+    color: var(--text);
+}
+
+#search button {
+    padding: 7px 12px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--cyan);
+    color: #012;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#logo {
+    grid-area: logo;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo .gem {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--gold), #ff7a2f);
+    transform: rotate(45deg);
+    border-radius: 12px;
+    margin: 14px 0 22px;
+}
+
+#logo strong {
+    font-size: 1.3rem;
+    color: var(--gold);
+}
+
+#header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(120deg, #2d2766, var(--panel));
+}
+
+#header h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+#header p {
+    color: var(--muted);
+}
+
+#recent {
+    grid-area: recent;
+}
+
+#recent h3,
+#content h2 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+#recent li {
+    list-style: none;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 0.9rem;
+}
+
+#recent small {
+    display: block;
+    color: var(--muted);
+}
+
+#content {
+    grid-area: content;
+}
+
+#content article {
+    margin-bottom: 20px;
+}
+
+#content article:last-child {
+    margin-bottom: 0;
+}
+
+#content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+}
+
+.tgl {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+th,
+td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+}
+
+th {
+    color: var(--gold);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 18px;
+    background: var(--gold);
+    color: #241a00;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+label {
+    display: block;
+    margin: 10px 0 3px;
+}
+
+form.f input,
+form.f select,
+form.f textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid var(--line);
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+}
+
+#footer {
+    grid-area: footer;
+    text-align: center;
+    color: var(--muted);
+}
+
+#footer strong {
+    color: var(--text);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+    .wrap {
+        grid-template-columns: 1fr;
+        grid-template-areas: "menu" "search" "logo" "header" "content" "recent" "footer";
+    }
+}
